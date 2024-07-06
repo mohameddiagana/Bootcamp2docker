@@ -19,6 +19,7 @@ public class HibernateUtil {
 
 	public static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
+
 			try {
 				PropertiesReader reader = new PropertiesReader("database.properties");
 

@@ -8,7 +8,7 @@ import mr.diagspring.bootcamp2.entites.AccountUserEntity;
 public class AccountUserMapper {
 
 	public static AccountUserEntity toUserAccountEntity(UserDTO userDTO) {
-
+		/* INSTANCIATION DU CLASSE */
 		AccountUserEntity userEntity = new AccountUserEntity();
 		userEntity.setId(userDTO.getId());
 		userEntity.setFirstName(userDTO.getFirstName());

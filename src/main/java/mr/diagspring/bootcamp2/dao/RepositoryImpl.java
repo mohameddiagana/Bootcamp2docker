@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -13,14 +14,10 @@ import mr.diagspring.bootcamp2.config.HibernateUtil;
 
 public class RepositoryImpl<T> implements Repository<T> {
 	/*
-	 * @Autowired private HibernateUtil hibernateUtil;
-	 */
-
-	/*
-	 * OUVERTURE DE LA SESSION en Mode Protected
+	 * OUVERTURE DE LA SESSION
 	 */
 	protected Session session = HibernateUtil.getSessionFactory().openSession();
-	// protesession = HibernateUtil.createSessionFactory().openSession();
+
 	Transaction transaction = null;
 
 	@Override
